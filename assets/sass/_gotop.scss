@@ -1,0 +1,21 @@
+#goBtn {
+    // display: none;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 20px;
+    right: -50px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    background-color: $yl1;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#goBtn:hover {
+    background-color: $yl2;
+}

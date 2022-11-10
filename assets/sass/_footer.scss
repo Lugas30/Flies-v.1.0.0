@@ -1,0 +1,56 @@
+.footer-warp { 
+    border-top: solid 1px #eeeeee;
+    border-bottom: solid 1px #eeeeee;
+}
+
+.footer-content {
+    padding: 100px;
+
+    span {
+        font-family: "lemon";
+        font-size: 14px;
+        line-height: 62px;
+    }
+
+    li a{
+        font-family: "noah";
+        font-size: 14px;
+        line-height: 28px;
+        color: #a1a1a1;
+    }
+
+    a:hover {
+        color: $dk;
+        }
+}
+
+.btn-socmed {
+    background-color: #F7F7F7;
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    padding: 2px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+}
+
+.btn-socmed:hover {
+    background-color: #e6e6e6;
+}
+
+
+.copyright {
+    padding: 20px;
+    text-align: center;
+
+    span {
+        font-size: 10px;
+        font-family: "noah";
+        color: #a1a1a1;        
+    }
+}

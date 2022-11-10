@@ -1,0 +1,122 @@
+
+// Product photo detail
+.card {
+    background-color: rgba(255, 255, 255, 0);
+    background-clip: border-box;
+    border: none;
+    border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+    .card.product-pic-warp {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-pic-warp-mobile {
+        display: none;
+    }
+}
+
+fieldset.active {
+    display: block !important;
+}
+
+fieldset {
+    display: none;
+}
+
+.pic0 {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0px 0px 0px 110px;
+    padding-right: 10px;
+}
+
+.product-pic {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .thumbnails {
+        position: relative;
+        display: inline-block;
+        flex-direction: row !important;
+    }
+}
+
+.thumbnails {
+    position: absolute;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.tb {
+    width: 100%;
+    border: none;
+    margin: 0px 0px 5px 0px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.tb-active {
+    opacity: 1;
+}
+
+.thumbnail-img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (min-width: 576px) {
+    .thumbnail-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-detail-pic {
+        margin-bottom: 50px;
+    }
+}
+
+
+// Product description detail
+.prod-title {
+    font-family: "noah-bold";
+    font-size: 26px;
+}
+
+.prod-pr {
+    font-family: "noah";
+}
+
+.pr-normal {
+    font-size: 20px;
+}
+
+.pr-off {
+    font-size: 14px;
+    color: $gr !important;
+    text-decoration: line-through;
+}
+
+.pr-disc {
+    font-size: 20px;
+    margin-left: 5px;
+    color: $red;
+}
+
+.pr-persent {
+    margin-left: 5px;
+    color: $red;
+}
