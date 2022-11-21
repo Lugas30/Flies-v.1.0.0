@@ -170,8 +170,8 @@
         text-align: center;
 
         hr {
-            border-color: $bk;
-            border-width: 2px;
+            border-color: $lgr !important;
+            border-width: 1px;
         }
 
         h2 {
@@ -193,6 +193,7 @@
 }
 
 .product-title {
+    font-size: 14px;
     font-family: "noah";
 }
 

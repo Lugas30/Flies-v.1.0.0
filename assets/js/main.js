@@ -89,3 +89,58 @@
     });
 
     });
+
+
+    /*-----------------------------------
+        Adding class active to button
+    -----------------------------------*/
+    $(document).ready(function () {
+            $('.btn-size').click(function () {
+                $('.btn-size').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+    $(document).ready(function () {
+            $('.btn-color').click(function () {
+                $('.btn-color').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+    $(document).ready(function () {
+            $('.btn-love').click(function () {
+                $('.btn-love').toggleClass("active");
+            });
+        });
+
+    $(document).ready(function(){
+        $(".color-list").click(function(){
+            $(".panel-color").slideToggle("slow");
+        });
+    });
+
+    $(document).ready(function(){
+        $(".row-coupon").click(function(){
+            $(".panel-coupon").slideToggle("slow");
+        });
+    });
+    
+
+    /*-----------------------------------
+        Accordion tabs (detail product)
+    -----------------------------------*/
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active-tab");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+    }

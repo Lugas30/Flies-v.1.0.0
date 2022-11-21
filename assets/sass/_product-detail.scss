@@ -1,5 +1,10 @@
 
 // Product photo detail
+.product-container {
+    width: 90%;
+    margin: auto;
+}
+
 .card {
     background-color: rgba(255, 255, 255, 0);
     background-clip: border-box;
@@ -91,11 +96,6 @@ fieldset {
 
 
 // Product description detail
-.prod-title {
-    font-family: "noah-bold";
-    font-size: 26px;
-}
-
 .prod-pr {
     font-family: "noah";
 }
@@ -112,6 +112,7 @@ fieldset {
 
 .pr-disc {
     font-size: 20px;
+    font-weight: 700;
     margin-left: 5px;
     color: $red;
 }
@@ -119,4 +120,154 @@ fieldset {
 .pr-persent {
     margin-left: 5px;
     color: $red;
+}
+
+.sub-left {
+    span {
+        font-family: "noah-bold";
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-family: "noah";
+        cursor: pointer;
+    }
+}
+
+
+.sub-right {
+    text-align: right;
+}
+
+.color-select {
+    display: flex;
+    float: right;
+    font-family: "noah";
+
+    span {
+        padding: 10px;
+    }
+}
+
+.row-coupon {
+    font-family: "noah";
+    font-size: 14px;
+    cursor: pointer;
+    
+    b {
+        font-family: "noah-bold";
+        font-weight: 700;
+    }
+}
+
+.panel-color {
+    display: none;
+    width: 90%;
+    background-color: $wht;
+    box-shadow: 2px 0px 1px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    margin-top: 10px;
+}
+
+
+.panel-coupon {
+    display: none;
+    background-color: $wht;
+    height: auto;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.panel-coupon-warp {
+    display: flex;
+
+    button {
+        background-color: $wht;
+        width: 50%;
+        font-family: "noah";
+        font-size: 13px;
+        border-radius: 20px;
+        border: 1px solid $dk;
+    }
+
+    button:hover {
+        background-color: $dk;
+        color: $wht;
+    }
+}
+
+.row-addtobag {
+    width: 100%;
+    display: inline-flex;
+    vertical-align: middle;
+    border-top: 1px solid $lgr;
+    border-bottom: 1px solid $lgr;
+    padding: 20px 0;
+
+    .warp-love {
+        margin: auto;
+    }
+}
+
+
+.tabs-desc {
+    margin-top: 10px;
+}
+
+.accordion {
+    background-color: $wht;
+    color: $dk;
+    cursor: pointer;
+    padding: 20px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: "noah-bold";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.active-tab,
+.accordion:hover {
+    background-color: $wht;
+}
+
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    font-family: "noah";
+    font-size: 14px;
+    line-height: 24px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.accordion svg {
+    float: right;
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.accordion.active-tab svg {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cta-prod {
+    padding: 10px 0;
+    font-family: "noah-bold";
+    text-align: center;
+    
+    span {
+        font-size: 24px;
+        font-weight: 700;
+    }
 }

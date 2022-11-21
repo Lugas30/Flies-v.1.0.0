@@ -108,13 +108,13 @@
 
 .btn-yl {
     background-color: $yl1;
-    border: 1px solid $yl1;
+    border: 2px solid $yl1;
     font-family: 'lemon-light';
     font-size: 12px;
     font-weight: 700;
     color: $dk;
     letter-spacing: 1.5px;
-    width: 220px;
+    width: 90%;
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;
@@ -128,15 +128,15 @@
 .btn-yl:hover {
     background-color: $yl2;
     color: $dk;
+    border: 2px solid $yl1;
 }
 
 
 .btn-size {
     background-color: $wht;
     border: 1px solid $dk;
-    font-family: 'lemon-light';
+    font-family: 'lemon';
     font-size: 14px;
-    font-weight: 700;
     color: $dk;
     width: 35px;
     height: 35px;
@@ -181,22 +181,26 @@
     border: 1px solid $dk;
 }
 
+.color-pallet {
+    vertical-align: middle;
+}
+
 .color-pallet .active {
     border: 1px solid $dk;
 }
 
 
 .btn-love {
-    background-color: $wht;
-    border: 1px solid $dk;
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    font-family: "lemon";
     font-size: 14px;
-    font-weight: 700;
+    color: #222222;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    padding: 5px 0px;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
