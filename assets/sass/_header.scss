@@ -1,0 +1,201 @@
+/*----------------------------------------*/
+/* Site header
+/*----------------------------------------*/
+
+.site-header {
+    display: flex;
+    background-color: $white;
+    padding: 0px 40px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 70px;
+    z-index: 100;
+}
+
+.site-header-left {
+    width: 40%;
+
+    .site-header-nav {
+        display: flex;
+        justify-content: flex-start;
+        float: left;
+        height: 100%;
+
+        li {
+            margin: auto 10px;
+            cursor: pointer;
+
+            span {
+                font-family: "noah-bold";
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.site-header-center {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+
+    .logo {
+        height: 100%;
+
+        img {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.site-header-right {
+    width: 40%;
+    
+    .site-header-nav {
+        display: flex;
+        justify-content: flex-start;
+        float: right;
+        height: 100%;
+
+        .site-header-item {
+            margin: auto 10px;
+            padding: 23px 0;
+            // cursor: pointer;
+            background-color: $white;
+
+            span {
+                font-family: "noah-bold";
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: static;
+
+    span {
+        line-height: 24px;
+        color: $black-text;
+    }
+}
+
+.dropdown-warp {
+    visibility: hidden;
+    border-radius: 0px;
+    top: 70px;
+    left: 0;
+    position: absolute;
+    padding: 18px;
+    min-height: 250px;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $border;
+    z-index: 999;
+}
+
+.dropdown-content {
+    background-color: $white;
+    
+    .row {
+        padding: 10px;
+        
+        .col {
+            padding: 10px;
+
+            li {
+                display: block;
+                line-height: 32px;
+
+                a {
+                    font-family: 'noah';
+                    font-size: 13px;
+                    color: $black-text;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .menu-title {
+                font-family: 'lemon';
+                font-size: 13px;
+                letter-spacing: 1px;
+                line-height: 32px;
+            }
+        }
+    }
+}
+
+.dropdown:hover .dropdown-warp {
+    display: block !important;
+    visibility: visible;
+}
+
+
+.peek-bag {
+    position: static;
+}
+
+.peek-bag-warp {
+    display: block !important;
+    visibility: hidden;
+    top: 70px;
+    right: 0;
+    position: absolute;
+    padding: 20px;
+    min-height: 60px;
+    width: 20%;
+    background-color: $white;
+    border: 1px solid $border;
+    z-index: 999;
+}
+
+.peek-bag:hover .peek-bag-warp {
+    display: block !important;
+    visibility: visible;
+}
+
+.peek-bag-content {
+    .row {
+        padding-bottom: 20px;
+    } 
+}
+
+.peek-bag-note {
+    font-family: 'noah';
+    font-size: 14px;
+    color: $black-text;
+}
+
+.peek-bag-info {
+    padding-left: 10px;
+
+    p {
+        font-family: "noah";
+        line-height: 18px;
+    }
+}
+
+.peek-total {
+    display: inline;
+
+    span {
+        font-size: 16px;
+    }
+}
+
+.peek-btn {
+    text-align: center;
+    margin-top: 10px;
+}
