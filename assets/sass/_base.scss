@@ -32,7 +32,7 @@ textarea:focus {
 /*----------------------------------------*/
 /* Header & promo-bar space
 /*----------------------------------------*/
-main {
+.main-block {
     margin-top: 70px;
 }
 
@@ -307,4 +307,314 @@ p {
         border: 4px solid $pink1;
         border-left-color: transparent;
     }
+}
+
+
+/*----------------------------------------*/
+/* Breadcrumb
+/*----------------------------------------*/
+
+.breadcrumb {
+    padding: 20px 0px;
+    list-style: none;
+    margin-bottom: 0px;
+    font-family: 'noah';
+    font-size: 14px;
+    border-bottom: 1px solid $border;
+
+    ul li {
+        display: inline;
+    
+        a {
+            color: $black-text;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+            color: $black-text;
+        }
+    }
+    
+    ul li+li:before {
+        padding: 8px;
+        color: $black-text;
+        content: "/";
+    }
+}
+
+
+
+/*----------------------------------------*/
+/* Button Style
+/*----------------------------------------*/
+
+/* btn-white */
+
+.btn-white {
+    min-width: 220px;
+    padding: 12px;
+    border: 2px solid $black-text;
+    border-radius: 20vmax;
+    font-family: "noah-bold";
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    background-color: $white;
+    color: $black-text;
+}
+
+.btn-white:hover {
+    background-color: $black-text;
+    color: $white;
+}
+
+/* btn-black */
+
+.btn-black {
+    min-width: 220px;
+    padding: 12px;
+    border: 2px solid $black-text;
+    border-radius: 20vmax;
+    font-family: "noah-bold";
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    background-color: $black;
+    color: $white;
+}
+
+.btn-black:hover {
+    background-color: $white;
+    color: $black-text;
+}
+
+/* btn-pink */
+
+.btn-pink {
+    min-width: 220px;
+    padding: 12px;
+    border: 2px solid $pink1;
+    border-radius: 20vmax;
+    font-family: "noah-bold";
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    background-color: $pink1;
+    color: $white;
+}
+
+.btn-pink:hover {
+    border: 2px solid $black;
+    background-color: $white;
+    color: $black-text;
+}
+
+/* btn-yellow */
+
+.btn-yellow {
+    min-width: 100%;
+    padding: 12px;
+    border: 2px solid $yellow;
+    border-radius: 20vmax;
+    font-family: "noah-bold";
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    background-color: $yellow;
+    color: $black-text;
+}
+
+.btn-yellow:hover {
+    border: 2px solid $black;
+    background-color: $white;
+    color: $black-text;
+}
+
+/* btn-love */
+
+.btn-love {
+    background-color: $white;
+    border: 1px solid $black-text;
+    font-family: "lemon";
+    font-size: 14px;
+    color: $black-text;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+}
+
+.warp-love .active {
+    background-color: $red;
+    border: 1px solid $red;
+    fill: $white;
+}
+
+/*----------------------------------------*/
+/* Form input Style
+/*----------------------------------------*/
+
+/* Input form style */
+
+.std-input {
+    font-size: 14px;
+    font-family: "noah";
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $border;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.ginput {
+    font-size: 14px;
+    font-family: "noah";
+    padding: 10px 10px 10px 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $border;
+}
+
+.ginput-subs {
+    font-size: 12px;
+    padding: 10px 10px 5px 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid $border;
+}
+
+.ginput:focus {
+    outline: none;
+}
+
+.glabel {
+    color: $black-text;
+    font-size: 14px;
+    font-family: 'noah';
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+.ginput:focus~.glabel,
+.ginput:valid~.glabel {
+    top: -10px;
+    font-size: 12px;
+    color: $black-text;
+}
+
+
+
+/* Select list input form style */
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 41px;
+    border-bottom: solid 1px var(--black-text);
+    font-size: 12px;
+    font-family: 'noah';
+}
+
+.option {
+    padding: 0 30px 0 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-top: var(--border) solid 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    order: 2;
+    z-index: 1;
+    transition: background .2s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.option:hover {
+    background: var(--pink2);
+    font-size: 14px;
+    font-weight: 700;
+    transition: .2s ease-in-out;
+}
+
+.select:focus .option {
+    position: relative;
+    pointer-events: all;
+}
+
+.selectopt {
+    opacity: 0;
+    position: absolute;
+    left: -99999px;
+}
+
+.selectopt:checked+label {
+    order: 1;
+    z-index: 2;
+    background: var(--white);
+    border-top: none;
+    position: relative;
+}
+
+.selectopt:checked+label:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--black-text);
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 2.5px);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.selectopt:checked+label:before {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    content: '';
+    background: var(--white);
+}
+
+.selectlabel {
+    color: var(--black-text);
+    font-size: 12px;
+    font-family: 'noah';
+    position: absolute;
+    z-index: 10;
+    top: -10px;
+    font-size: 12px;
+    color: var(--black-text);
 }

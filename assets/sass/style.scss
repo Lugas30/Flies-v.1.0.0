@@ -1,16 +1,13 @@
 @import "variable";
-// @import "mixins";
+@import "mixins";
 
 @import "base";
 @import "header";
-@import "button";
-// @import "input-form";
 @import "home";
-// @import "filtersort";
-// @import "product-grid";
-// @import "product-view";
-// @import "signin";
-// @import "shopping-bag";
+@import "product-grid";
+@import "product-view";
+@import "registration";
+@import "shopping-bag";
 // @import "shipping-detail";
 // @import "thanks-page";
 // @import "account";

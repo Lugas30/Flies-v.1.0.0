@@ -1,0 +1,341 @@
+/*----------------------------------------*/
+/* Product view
+/*----------------------------------------*/
+
+// Left side
+.product-view-container {
+    width: 90%;
+    margin: auto;
+}
+
+.product-view-row {
+    margin: 30px 0 50px 0;
+}
+
+@media (max-width: 768px) {
+    .card.product-pic-warp {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-pic-warp-mobile {
+        display: none;
+    }
+}
+
+fieldset.active {
+    display: block !important;
+}
+
+fieldset {
+    display: none;
+}
+
+.pic0 {
+    width: 35vw;
+    height: auto;
+    display: block;
+    margin-left: 5.5vw;
+    padding-right: 10px;
+}
+
+.product-pic {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .thumbnails {
+        position: relative;
+        display: inline-block;
+        flex-direction: row !important;
+    }
+}
+
+.thumbnails {
+    position: absolute;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.tb {
+    width: 100%;
+    border: none;
+    margin: 0 0 1vh 0;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.tb-active {
+    opacity: 1;
+}
+
+.thumbnail-img {
+    width: 5vw;
+    height: auto;
+}
+
+@media (min-width: 576px) {
+    .thumbnail-img {
+        width: 5vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-detail-pic {
+        margin-bottom: 50px;
+    }
+}
+
+// Right side
+
+.product-view-title {
+    font-family: 'noah-bold';
+}
+
+.product-view-price {
+    display: flex;
+
+    .normal-price {
+        margin: 10px 10px 10px 0;
+
+        .price {
+            font-family: 'noah';
+            font-size: 18px;
+            color: $black-text;
+        }
+
+        .off {
+            text-decoration: line-through;
+            font-size: 16px !important;
+            color: $non-active;
+        }
+    }
+
+    .discount-price {
+        margin: 10px 10px 10px 0;
+
+        .price {
+            font-family: 'noah';
+            font-size: 18px;
+            color: $red;
+        }
+
+        .percent {
+            font-family: 'noah';
+            font-size: 18px;
+            color: $red;
+        }
+    }
+}
+
+
+.product-view-color {
+    padding: 10px 0;
+}
+
+.sub-title {
+    font-family: 'noah-bold';
+    font-size: 14px;
+    text-transform: uppercase;
+
+    #color-name {
+        font-family: 'noah';
+        text-transform: none;
+    }
+}
+
+.color-option {
+    display: inline-flex;
+    float: right;
+}
+
+.color-option-warp {
+    margin: 5px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-active {
+    border: 1px solid $black;
+}
+
+.color-btn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+// .color-option-warp:hover {
+//     border: 1px solid $black;
+// }
+
+
+.product-view-size {
+    padding: 10px 0;
+}
+
+.size-option {
+    display: inline-flex;
+    float: right;
+}
+
+.size-option-warp {
+    margin: 5px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.size-btn {
+    margin: 3px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid $black;
+    background-color: $white;
+    font-family: "noah-bold";
+    font-size: 14px;
+    color: $black-text;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.size-btn:hover {
+    border: 1px solid $black;
+    color: $black-text;
+}
+
+.size-active {
+    border: 1px solid $black;
+
+    a {
+        background-color: $black;
+        border: 1px solid $black;
+        color: $white;
+    }
+
+    a:hover {
+        color: $white;
+    }
+}
+
+.row-coupon {
+    font-family: "noah";
+    font-size: 14px;
+    cursor: pointer;
+    margin: 30px 0 10px 0;
+
+    b {
+        font-family: "noah-bold";
+    }
+}
+
+.panel-coupon {
+    display: none;
+    background-color: $white;
+    height: auto;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.panel-coupon-warp {
+    display: flex;
+
+    button {
+        background-color: $white;
+        width: 50%;
+        font-family: "noah";
+        font-size: 13px;
+        border-radius: 20px;
+        border: 1px solid $border;
+    }
+
+    button:hover {
+        background-color: $grey;
+        color: $white;
+    }
+}
+
+.group-button {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.group-button-left {
+    width: 90%;
+}
+
+.group-button-right {
+    width: 10%;
+    padding-left: 8px;
+}
+
+.tabs-description {
+    margin-top: 10px;
+}
+
+.accordion {
+    background-color: $white;
+    color: $black-text;
+    cursor: pointer;
+    // padding-bottom: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: "noah-bold";
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.active-tab,
+.accordion:hover {
+    background-color: $white;
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    font-family: "noah";
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion svg {
+    float: right;
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.accordion.active-tab svg {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cta-title {
+    font-size: 24px;
+    font-family: 'noah-bold';
+    line-height: 48px;
+}

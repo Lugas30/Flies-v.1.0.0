@@ -36,18 +36,19 @@
         <div class="site-header-left">
             <ul class="site-header-nav">
                 <li class="site-header-item" title="Special Offer">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_1_86" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
-                            height="24">
-                            <rect x="24" width="24" height="24" transform="rotate(90 24 0)" fill="#D9D9D9" />
-                        </mask>
-                        <g mask="url(#mask0_1_86)">
-                            <path
-                                d="M2.95 13.9C2.66667 13.6167 2.525 13.2627 2.525 12.838C2.525 12.4127 2.66667 12.0583 2.95 11.775L11.75 2.975C11.9 2.825 12.0667 2.70833 12.25 2.625C12.4333 2.54167 12.6333 2.5 12.85 2.5L20 2.5C20.4167 2.5 20.7707 2.646 21.062 2.938C21.354 3.22933 21.5 3.58333 21.5 4V11.15C21.5 11.35 21.4583 11.546 21.375 11.738C21.2917 11.9293 21.1833 12.0917 21.05 12.225L12.25 21.025C11.95 21.325 11.5877 21.475 11.163 21.475C10.7377 21.475 10.3833 21.3333 10.1 21.05L2.95 13.9ZM4 12.825L11.15 19.975L20 11.15V4H12.85L4 12.825ZM16.25 6.5C16.25 6.85 16.371 7.146 16.613 7.388C16.8543 7.62933 17.15 7.75 17.5 7.75C17.85 7.75 18.146 7.62933 18.388 7.388C18.6293 7.146 18.75 6.85 18.75 6.5C18.75 6.15 18.6293 5.85433 18.388 5.613C18.146 5.371 17.85 5.25 17.5 5.25C17.15 5.25 16.8543 5.371 16.613 5.613C16.371 5.85433 16.25 6.15 16.25 6.5Z"
-                                fill="#1C1B1F" />
-                        </g>
-                    </svg>
-                    <span>Special offer</span>
+                    <a href="special-offer.html">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1_86" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <rect x="24" width="24" height="24" transform="rotate(90 24 0)" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1_86)">
+                                <path
+                                    d="M2.95 13.9C2.66667 13.6167 2.525 13.2627 2.525 12.838C2.525 12.4127 2.66667 12.0583 2.95 11.775L11.75 2.975C11.9 2.825 12.0667 2.70833 12.25 2.625C12.4333 2.54167 12.6333 2.5 12.85 2.5L20 2.5C20.4167 2.5 20.7707 2.646 21.062 2.938C21.354 3.22933 21.5 3.58333 21.5 4V11.15C21.5 11.35 21.4583 11.546 21.375 11.738C21.2917 11.9293 21.1833 12.0917 21.05 12.225L12.25 21.025C11.95 21.325 11.5877 21.475 11.163 21.475C10.7377 21.475 10.3833 21.3333 10.1 21.05L2.95 13.9ZM4 12.825L11.15 19.975L20 11.15V4H12.85L4 12.825ZM16.25 6.5C16.25 6.85 16.371 7.146 16.613 7.388C16.8543 7.62933 17.15 7.75 17.5 7.75C17.85 7.75 18.146 7.62933 18.388 7.388C18.6293 7.146 18.75 6.85 18.75 6.5C18.75 6.15 18.6293 5.85433 18.388 5.613C18.146 5.371 17.85 5.25 17.5 5.25C17.15 5.25 16.8543 5.371 16.613 5.613C16.371 5.85433 16.25 6.15 16.25 6.5Z"
+                                    fill="#1C1B1F" />
+                            </g>
+                        </svg>
+                        <span>Special offer</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -62,7 +63,7 @@
         <!-- Right header  -->
         <div class="site-header-right">
             <ul class="site-header-nav">
-                <li class="site-header-item search-bar">
+                <li class="site-header-item search-bar" onclick="openSearch()">
                     <a href="#">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <title>Search</title>
@@ -78,7 +79,7 @@
                     </a>
                 </li>
                 <li class="site-header-item">
-                    <a href="#">
+                    <a href="account.html">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <title>Account</title>
                             <mask id="mask0_1_80" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -114,27 +115,51 @@
                                 <div class="col-md-3">
                                     <img src="assets/img/product/1A.jpeg" alt="">
                                 </div>
-                                <div class="col-md-9 peek-bag-info">
-                                    <p>Edge Denim Jacket White</p>
-                                    <p>1 x 299.000</p>
-                                    <p>Size : M</p>
-                                    <p>Color : White</p>
+                                <div class="col-md-9">
+                                    <div class="peek-bag-info">
+                                        <span class="peek-bag-title">Edge Denim Jacket White</span>
+                                        <div class="peek-bag-price">
+                                            <div id="" class="normal-price">
+                                                <span class="price">1 x IDR 299.000</span>
+                                            </div>
+                                            <div id="" class="discount-price">
+                                                <span class="price"></span>
+                                                <span class="percent"></span>
+                                            </div>
+                                        </div>
+                                        <div class="peek-bag-detail">
+                                            <span>Size : M</span>
+                                            <span>Color : White</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row g-0">
                                 <div class="col-md-3">
                                     <img src="assets/img/product/1A.jpeg" alt="">
                                 </div>
-                                <div class="col-md-9 peek-bag-info">
-                                    <p>Edge Denim Jacket White</p>
-                                    <p>1 x 299.000</p>
-                                    <p>Size : M</p>
-                                    <p>Color : White</p>
+                                <div class="col-md-9">
+                                    <div class="peek-bag-info">
+                                        <span class="peek-bag-title">Edge Denim Jacket White</span>
+                                        <div class="peek-bag-price">
+                                            <div id="" class="normal-price">
+                                                <span class="price off">IDR 299.000</span>
+                                            </div>
+                                            <div id="" class="discount-price">
+                                                <span class="price">1 x IDR 149.000</span>
+                                                <span class="percent">(50%)</span>
+                                            </div>
+                                        </div>
+                                        <div class="peek-bag-detail">
+                                            <span>Size : M</span>
+                                            <span>Color : White</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="peek-total">
-                                <span class="pk-left">Total :</span>
-                                <span class="pk-right">IDR 320.000</span>
+                                <span class="pt-left">Total :</span>
+                                <span class="pt-right">IDR 320.000</span>
                             </div>
                             <div class="peek-btn">
                                 <a class="btn-white" href="">View Bag</a>
@@ -143,7 +168,7 @@
                     </div>
                 </li>
                 <li class="site-header-item dropdown">
-                    <span title="Menu">Menu</span>
+                    <span class="menu-text" title="Menu">Menu</span>
                     <div class="dropdown-warp">
                         <div class="dropdown-content">
                             <div class="row g-0">
@@ -189,9 +214,40 @@
             </ul>
         </div>
     </div>
+    <!-- Search bar dropdown -->
+    <form id="search-bar">
+        <div class="search-bar-warp">
+            <div class="search-bar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_1_83" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_1_83)">
+                        <path
+                            d="M19.55 20.575L13.25 14.3C12.75 14.7167 12.175 15.0417 11.525 15.275C10.875 15.5083 10.2084 15.625 9.52502 15.625C7.80836 15.625 6.35836 15.0333 5.17502 13.85C3.99169 12.6667 3.40002 11.2167 3.40002 9.5C3.40002 7.8 3.99169 6.354 5.17502 5.162C6.35836 3.97067 7.80836 3.375 9.52502 3.375C11.225 3.375 12.6667 3.96667 13.85 5.15C15.0334 6.33333 15.625 7.78333 15.625 9.5C15.625 10.2167 15.5084 10.9 15.275 11.55C15.0417 12.2 14.725 12.7667 14.325 13.25L20.6 19.525L19.55 20.575ZM9.52502 14.125C10.8084 14.125 11.896 13.675 12.788 12.775C13.6794 11.875 14.125 10.7833 14.125 9.5C14.125 8.21667 13.6794 7.125 12.788 6.225C11.896 5.325 10.8084 4.875 9.52502 4.875C8.22502 4.875 7.12936 5.325 6.23802 6.225C5.34602 7.125 4.90002 8.21667 4.90002 9.5C4.90002 10.7833 5.34602 11.875 6.23802 12.775C7.12936 13.675 8.22502 14.125 9.52502 14.125Z"
+                            fill="#1C1B1F" />
+                    </g>
+                </svg>
+            </div>
+            <input id="searchHeaderInput" placeholder="Product, Store..." type="search" autocomplete="off" autocorrect="off"
+                autocapitalize="none" spellcheck="false" class="search-bar-input">
+        </div>
+        <button class="search-bar-close" type="button" onclick="closeSearch()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_46_2317" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_46_2317)">
+                    <path
+                        d="M6.4001 18.6501L5.3501 17.6001L10.9501 12.0001L5.3501 6.4001L6.4001 5.3501L12.0001 10.9501L17.6001 5.3501L18.6501 6.4001L13.0501 12.0001L18.6501 17.6001L17.6001 18.6501L12.0001 13.0501L6.4001 18.6501Z"
+                        fill="#1C1B1F" />
+                </g>
+            </svg>
+        </button>
+    </form>
 </header>
 
-<main>
+<main class="main-block">
     <!-- Promo bar -->
     <div class="promo-bar active">
         <a href="">
@@ -376,8 +432,8 @@
     <div class="cta-product">
         <div class="container">
             <h2>new arrival</h2>
-            <div class="product-row">
-                <div class="product-col">
+            <div class="row g-0 product-row">
+                <div class="col-md-3 product-col">
                     <a class="product-warp" href="">
                         <img src="assets/img/product/1A.jpeg" alt="product title" loading="lazy">
                         <div class="product-inner">
@@ -394,7 +450,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-col">
+                <div class="col-md-3 product-col">
                     <a class="product-warp" href="">
                         <img src="assets/img/product/1A.jpeg" alt="product title" loading="lazy">
                         <div class="product-inner">
@@ -411,7 +467,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-col">
+                <div class="col-md-3 product-col">
                     <a class="product-warp" href="">
                         <img src="assets/img/product/1A.jpeg" alt="product title" loading="lazy">
                         <div class="product-inner">
@@ -428,7 +484,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-col">
+                <div class="col-md-3 product-col">
                     <a class="product-warp" href="">
                         <img src="assets/img/product/1A.jpeg" alt="product title" loading="lazy">
                         <div class="product-inner">
