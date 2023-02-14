@@ -1,0 +1,149 @@
+/*----------------------------------------*/
+/* Account
+/*----------------------------------------*/
+
+.container-account {
+    padding: 46px;
+}
+
+.side-panel .view-panel {
+    width: auto;
+    box-shadow: rgba(141, 150, 170, 0.4) 0px 1px 6px 0px;
+    border-radius: 52px;
+}
+
+.side-panel-name {
+    font-family: 'noah-bold';
+}
+
+.side-panel-items {
+    font-family: 'noah';
+}
+
+.view-panel-header {
+    font-family: 'noah-bold';
+    display: flex;
+}
+
+// Account - Biodata ----------------------
+
+.bio-line {
+    font-family: "noah";
+    display: flex;
+
+    span,
+    a {
+        line-height: 44px;
+    }
+
+}
+
+.bio-line-item {
+    width: 150px;
+}
+
+
+// Account - Transaction ------------------
+
+.trans-search {
+    max-width: 200px;
+    margin: auto;
+
+    input {
+        height: fit-content;
+    }
+}
+
+.trans-head {
+    display: flex;
+    font-family: 'noah';
+    font-size: 14px;
+
+    span {
+        display: block;
+    }
+}
+
+.trans-status {
+    border: 1px solid $border;
+    border-radius: 10px;
+}
+
+.trans-prod-item {
+    img {
+        max-width: 50px;
+    }
+}
+
+.trans-prod-desk {
+    span {
+        display: block;
+        font-family: 'noah';
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.trans-total {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'noah';
+    font-size: 14px;
+
+    span {
+        display: block;
+        line-height: 24px;
+    }
+
+    a {
+        color: $grey;
+    }
+
+    a:hover {
+        color: $pink1;
+    }
+}
+
+
+// Account - Detail Transaction (Modal) ------------------
+
+.transaction-modal {
+    span {
+        font-family: 'noah';
+        font-size: 14px;
+    }
+}
+
+.modal-title {
+    font-family: 'noah-bold';
+}
+
+.dt-title {
+    font-family: 'noah-bold';
+    padding-bottom: 18px;
+}
+
+.dt-img {
+    vertical-align: middle;
+    width: 40px;
+}
+
+.dt-item {
+    width: 100%;
+
+    td {
+        font-family: 'noah';
+        font-size: 14px;
+        height: 26px;
+        padding: 5px;
+        vertical-align: auto;
+    }
+
+        .dt-price {
+            align-items: end;
+        }
+}
+
+.dt-price {
+    text-align: right;
+}

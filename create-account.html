@@ -35,35 +35,30 @@
     <main>
         <div class="register-block">
             <div class="register-block-left">
-                <form class="register-form-warp">
+                <form class="register-form-warp" action="create-account-action.php" method="post">
                     <span class="register-title">Create <br>your account</span>
                     <div class="signin-input">
-                        <div class="group">
-                            <input class="ginput" type="text" name="email" required>
-                            <label class="glabel">Email</label>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="ControlInputEmail" name="email" placeholder="Email address" required>
                         </div>
-                        <div class="group">
-                            <input class="ginput" type="text" name="full-name" required>
-                            <label class="glabel">Full Name</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="phone" placeholder="No. HP" required>
                         </div>
-                        <div class="group">
-                            <input class="ginput" type="text" name="phone-number" required>
-                            <label class="glabel">Phone Number</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="fullname" placeholder="Full Name" required>
                         </div>
-                        <div class="group">
-                            <input class="ginput" type="password" name="pass" required>
-                            <label class="glabel">Password</label>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="ControlInputPass" name="password" placeholder="Password" required>
                         </div>
-                        <div class="group">
-                            <input class="ginput" type="password" name="re-pass" required>
-                            <label class="glabel">Re-password</label>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="ControlInputConfirmPass" name="confirm-password" placeholder="Confirm Password" required>
                         </div>
                         <span class="term">By creating an account you agree to our Terms & Privacy.</span><br>
                         <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
                         <label class="term" for="subscribe"> Subscribe newsletter</label><br>
                     </div>
                     <div class="signin-btn">
-                        <a class="btn-black">Register</a>
+                        <button class="btn-black" type="submit">Register</button>
                     </div>
                 </form>
             </div>

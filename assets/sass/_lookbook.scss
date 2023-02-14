@@ -1,0 +1,39 @@
+/*----------------------------------------*/
+/* Lookbook
+/*----------------------------------------*/
+
+.lookbook-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 60%;
+    margin: auto;
+
+    h1 {
+        font-family: "noah-bold";
+        padding: 10px 0;
+    }
+
+    p {
+        font-family: "noah";
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px 0;
+    }
+}
+
+.lookbook-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 24px;
+    }
+
+    a {
+        margin: 20px;
+    }
+}

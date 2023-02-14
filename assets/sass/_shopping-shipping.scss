@@ -1,0 +1,154 @@
+/*-------------------------------------------------------*/
+/* Shopping & Shipping
+/*-------------------------------------------------------*/
+
+.page-heading {
+    font-family: 'noah-bold';
+    padding: 10px 0;
+}
+
+.page-small-heading {
+    font-family: 'noah-bold';
+    padding: 10px 0;
+}
+
+/*-------------------------------------------------------*/
+/* Shopping bag
+/*-------------------------------------------------------*/
+
+.shopbag-item {
+    font-family: 'noah';
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.shopbag-item-delete {
+    vertical-align: middle;
+}
+
+.shopbag-inner-detail {
+    color: $non-active;
+}
+
+.sum-conten {
+    font-family: 'noah';
+    font-size: 14px;
+
+    .text-total, .total-price-sum {
+        font-family: 'noah-bold';
+    }
+}
+
+input.qtyminus {
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #F7F7F7;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qtyminus:hover {
+    background: #eeeeee;
+}
+
+input.qtyplus {
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #F7F7F7;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qtyplus:hover {
+    background: #eeeeee;
+}
+
+button.delete-prod {
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background: #F7F7F7;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qty {
+    border: none;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+.shopbag-right span{
+    font-family: 'noah';
+    font-size: 14px;
+}
+
+.shopbag-item-delete {
+    margin: auto;
+}
+
+
+/*-------------------------------------------------------*/
+/* Shipping detail
+/*-------------------------------------------------------*/
+
+.shipping-background {
+    background-color: #FFF3F8;
+}
+
+.shipping-left {
+    padding: 30px;
+}
+
+.shipping-right {
+    padding: 30px;
+}
+
+.shipping-warp {
+    padding: 50px;
+    background-color: $white;
+}
+
+.voucher-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #F5F5F5;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    span {
+        font-family: 'noah';
+        font-size: 13px;
+    }
+}
+
+.panel-voucher {
+    display: none;
+    background-color: $white;
+    height: auto;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.panel-voucher-warp {
+    display: flex;
+
+    button {
+        background-color: $white;
+        width: 50%;
+        font-family: "noah";
+        font-size: 13px;
+        border-radius: 20px;
+        border: 1px solid $border;
+    }
+
+    button:hover {
+        background-color: $grey;
+        color: $white;
+    }
+}

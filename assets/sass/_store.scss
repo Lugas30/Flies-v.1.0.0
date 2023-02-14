@@ -1,0 +1,51 @@
+/*----------------------------------------*/
+/* Store Location
+/*----------------------------------------*/
+
+.store-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    h1 {
+        font-family: "noah-bold";
+        padding: 10px 0;
+    }
+
+    p {
+        font-family: "noah";
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px 0;
+    }
+}
+
+.store-select {
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+    color: $black-text;
+}
+
+.store-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'noah';
+    font-size: 14px;
+    line-height: 28px;
+
+    a {
+        color: $black-text;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.store-name {
+    font-size: 16px;
+    font-family: 'noah-bold';
+    padding-bottom: 20px;
+}
+
+

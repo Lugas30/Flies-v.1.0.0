@@ -1,0 +1,32 @@
+/*----------------------------------------*/
+/* Thankyou page
+/*----------------------------------------*/
+
+.thanks-block {
+    height: 100vh;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+}
+
+.thanks-heading {
+    font-family: 'noah-bold';
+}
+
+.thanks-img {
+    img {
+        max-height: 100vh;
+        width: 350px;
+    }
+}
+
+.thanks-button {
+    width: 300px;
+    margin: auto;
+
+    a {
+        display: block;
+        width: auto;
+        margin: 10px;
+    }
+}

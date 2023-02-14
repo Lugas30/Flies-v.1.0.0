@@ -35,24 +35,22 @@
 <main>
     <div class="register-block">
         <div class="register-block-left">
-            <form class="register-form-warp">
+            <form class="register-form-warp" action="signin-action.php" method="post">
                 <span class="register-title">Sign in to <br>your account</span>
                 <div class="signin-input">
-                    <div class="group">
-                        <input class="ginput" type="text" name="email" required>
-                        <label class="glabel">Email</label>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="ControlInputEmail" name="email" placeholder="Email" required>
                     </div>
-                    <div class="group">
-                        <input class="ginput" type="text" name="pass" required>
-                        <label class="glabel">Password</label>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="ControlInputPass" name="password" placeholder="Password" required>
                     </div>
-                </div>
+                </div>  
                 <div class="signin-btn">
                     <a class="forgot-link" href="forgot-password.html">
                         <span>Forgot password? <b>Click here</b></span>
                     </a>
-                    <a class="btn-black">Sign in</a>
-                    <a class="btn-white">Create an Account</a>
+                    <button class="btn-black" type="submit">Sign in</button>
+                    <a class="btn-white" href="create-account.html">Create an Account</a>
                 </div>
             </form>
         </div>

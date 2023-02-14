@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+    <title>Component</title>
+</head>
+<body>
+    <div class="compon-header">
+        <div class="compon-head-title">
+            <h1>Components</h1>
+            <span>Library component</span>
+        </div>
+    </div>
+    <div class="container px-5">
+        <!-- Inputs -->
+        <h2 class="compon-title mt-5">Inputs</h2>
+        <hr>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h4 class="section-secondary-title pb-3">Neon style :</h4>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="ControlInputEmail" name="email" placeholder="Email address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="ControlInputPass" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" id="ControlInputDate" name="date" placeholder="Date" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="sesuaiInput" placeholder="Text only...">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="sesuaiInput" placeholder="Text only... required" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="exampleFormControlSelect1" name="sesuaiInput">
+                        <option>Example select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select multiple class="form-control" id="exampleFormControlSelect2" name="sesuaiInput">
+                        <option>Example multiple select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="sesuaiInput" rows="3"
+                        placeholder="Example textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="section-secondary-title pb-3">Google style :</h4>
+                <div class="group">
+                    <input class="ginput" type="text" name="email" required>
+                    <label class="glabel">Email</label>
+                </div>
+            </div>
+        </div> <!-- end of inputs -->
+    </div>
+</body>
+</html>

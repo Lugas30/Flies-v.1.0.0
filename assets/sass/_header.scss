@@ -25,6 +25,7 @@
         li {
             margin: auto 10px;
             cursor: pointer;
+            list-style: none;
 
             span {
                 font-family: "noah-bold";
@@ -64,6 +65,7 @@
         justify-content: flex-start;
         float: right;
         height: 100%;
+        list-style: none;
 
         .site-header-item {
             margin: auto 10px;
@@ -116,6 +118,7 @@
             li {
                 display: block;
                 line-height: 32px;
+                list-style: none;
 
                 a {
                     font-family: 'noah';
