@@ -38,6 +38,19 @@
         });
     });
 
+    $(window).resize(function(){
+    if ($(window).width() < 768) {
+      $(".hide-filter").addClass("d-none");
+    } else {
+      $(".hide-filter").removeClass("d-none");
+    }
+  });
+
+  // Jika lebar layar sudah kurang dari 768 pada saat memuat halaman, sembunyikan tombol filter
+    if ($(window).width() < 768) {
+        $(".hide-filter").addClass("d-none");
+    }
+
 
     /*----------------------
         Sort by toogle
@@ -206,3 +219,18 @@
             } 
         });
     });
+
+
+    /*-----------------------------------
+        Mobile sidenav
+    -----------------------------------*/
+
+    function openMobNav() {
+        document.getElementById("mobileSidenav").style.width = "100%"; 
+    }
+
+    function closeMobNav() {
+        document.getElementById("mobileSidenav").style.width = "0"; 
+    }
+
+   

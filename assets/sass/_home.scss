@@ -16,6 +16,19 @@
     }
 }
 
+.carousel-main {
+    display: block;
+}
+
+.carousel-mobile {
+    display: none;
+}
+
+.carousel-item img{
+    height: 90vh;
+    object-fit: cover;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     height: 50px;
@@ -24,7 +37,6 @@
 
 .carousel-btn-warp {
     position: absolute;
-    display: inline-flex;
     bottom: 40px;
     right: 20px;
     color: white;
@@ -200,6 +212,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 90%;
     transform: translate(-50%, -50%);
     text-align: center;
 
@@ -211,6 +224,8 @@
     p {
         font-family: 'noah';
         font-size: 14px;
+        padding: 10px;
+        line-height: 22px;
     }
 
     a {

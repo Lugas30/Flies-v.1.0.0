@@ -117,7 +117,13 @@
 
 
 /* Create two equal columns that floats next to each other */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .product-col {
+    width: 25%;
     padding: 5px;
 }
 

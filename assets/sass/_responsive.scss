@@ -3,14 +3,399 @@
 /*----------------------------------------*/
 
 /*---- Responsive Media Quaries ----*/
-// only screen and (min-width:1366px)
-// only screen and (min-width:960px)
+// only screen and (min-width:1200px)
+// only screen and (min-width:992px)
 // only screen and (min-width:768px)
-// only screen and (min-width:320px)
+// only screen and (min-width:576px)
 /*----------------------------------*/
 
 
+/* Media query dengan min-width 1200px */
+@media only screen and (min-width: 1200px) {
+    /* rules yang diterapkan jika viewport width > 1200px */
 
-/*----------------------------------------*/
-/* Carousel banner
-/*----------------------------------------*/
+    .carousel-mobile {
+        display: none;
+    }
+
+    .btm-mobile {
+        display: none;
+    }
+}
+
+/* Media query dengan min-width 992px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* rules yang diterapkan jika viewport width 992px - 1199px */
+    
+    .carousel-mobile {
+        display: none;
+    }
+
+    .btm-mobile {
+        display: none;
+    }
+}
+
+
+/* Media query dengan min-width 768px */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /* rules yang diterapkan jika viewport width 768px - 991px */
+    
+    .carousel-mobile {
+        display: block;
+        height: 85vh;
+    }
+
+    .carousel-main {
+        display: none;
+    }
+
+    .carousel-btn-warp {
+        text-align: center;
+        margin: auto;
+        bottom: 70px;
+        right: 0;
+        left: 0;
+    }
+
+    .btn-pink {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .btn-white {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .btn-black {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .block-top {
+    margin: 2px;
+    
+    .row .col {
+            position: relative;
+            flex: 50%;
+            max-width: 50%;
+            padding: 2px;
+            margin: 0;
+        }
+    }
+    
+    .btm-mobile {
+        display: none;
+    }
+
+    .product-col {
+        width: 50%;
+    }
+}
+
+/* Media query dengan min-width 576px */
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    /* rules yang diterapkan jika viewport width 576px - 767px */
+
+    .carousel-mobile {
+        display: block;
+        height: 85vh;
+    }
+
+    .carousel-main {
+        display: none;
+    }
+
+    .carousel-btn-warp {
+        text-align: center;
+        margin: auto;
+        bottom: 70px;
+        right: 0;
+        left: 0;
+    }
+
+    .btn-pink {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .btn-white {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .btn-black {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .block-top {
+    margin: 0px;
+    
+    .row .col {
+            position: relative;
+            flex: 50%;
+            max-width: 50%;
+            padding: 0px;
+            margin: 0;
+        }
+    }
+    
+    .btm-main {
+        display: none;
+    }
+
+    .block-bottom {
+        margin: 0;
+
+        .row {
+            padding: 0;
+
+            .col {
+                position: relative;
+                flex: 50%;
+                max-width: 50%;
+                text-align: center;
+                padding: 0;
+                margin: auto;
+
+                h2 {
+                    font-family: "lemon";
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    .block-bottom-warp img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-col {
+        width: 50%;
+    }
+
+    .social-media {
+        padding: 20px 0;
+    }
+
+    .social-media-warp a {
+        margin-top: 20px;
+    }
+
+    .category-title {
+        text-align: center;
+    }
+}
+
+/* Media query dengan min-width 576px */
+@media only screen and (max-width: 575px) {
+    /* rules yang diterapkan jika viewport width < 575px */
+
+    .main-block {
+        margin-top: 60px;
+    }
+
+    .carousel-mobile {
+        display: block;
+        height: 85vh;
+    }
+
+    .carousel-main {
+        display: none;
+    }
+
+    .carousel-btn-warp {
+        display: block;
+        text-align: center;
+        margin: auto;
+        bottom: 70px;
+        right: 0;
+        left: 0;
+    }
+
+    .btn-pink {
+        min-width: 170px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .btn-white {
+        min-width: 170px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .btn-black {
+        min-width: 180px;
+        padding: .65em;
+        font-size: .85em;
+    }
+
+    .block-top {
+    margin: 0px;
+    
+    .row .col {
+            position: relative;
+            flex: 50%;
+            max-width: 50%;
+            padding: 0px;
+            margin: 0;
+        }
+    }  
+
+    .block-slide {
+    min-height: auto;
+    width: 100%;
+    background-color: #F4BBD3;
+    padding: 20px;
+    margin-bottom: 2px;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'lemon';
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .owl-carousel {
+        margin: auto;
+        width: 95%;
+        z-index: 0;
+
+        .block-slide-name {
+            height: 40px;
+            background-color: $white;
+            color: $black-text;
+            font-family: "noah-bold";
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 0px;
+        }
+    }
+
+    .btm-main {
+        display: none;
+    }
+
+    .block-bottom {
+        margin: 0;
+
+        .row {
+            padding: 0;
+
+            .col {
+                position: relative;
+                flex: 50%;
+                max-width: 50%;
+                text-align: center;
+                padding: 0;
+                margin: auto;
+
+                h2 {
+                    font-family: "lemon";
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    .block-bottom-warp img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-col {
+        width: 50%;
+    }
+
+    .social-media {
+        padding: 20px 0;
+    }
+
+    .social-media-warp a {
+        margin-top: 20px;
+    }
+
+    .subscribe {
+        margin: 20px 0;
+    }
+
+    .category-title {
+        text-align: center;
+    }
+
+    .site-header {
+        padding: 0px 5px;
+        height: 60px;
+    }
+
+    .site-header-left {
+        display: none;
+    }
+
+    .site-header-center {
+        justify-content: flex-start;
+        float: left;
+
+        .logo {
+            height: 100%;
+
+            img {
+                position: relative;
+                margin: auto 10px;
+            }
+        }
+    }
+
+    .site-header-right {
+    width: 100%;
+    
+        .site-header-nav {
+            display: flex;
+            justify-content: flex-end;
+            float: right;
+            height: 100%;
+            list-style: none;
+
+            .site-header-item {
+                margin: auto 10px;
+                padding: 18px 0;
+                // cursor: pointer;
+                // background-color: $white;
+
+                .menu-text {
+                    font-family: "noah-bold";
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+.dropdown:hover .dropdown-warp {
+    display: none !important;
+    visibility: none;
+}
+
+.peek-bag:hover .peek-bag-warp {
+    display: none !important;
+    visibility: none;
+}
+
+}
