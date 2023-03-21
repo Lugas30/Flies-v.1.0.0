@@ -196,6 +196,11 @@
     .category-title {
         text-align: center;
     }
+
+    .side-filter {
+        display: none;
+    }
+
 }
 
 /* Media query dengan min-width 576px */
@@ -388,14 +393,36 @@
         }
     }
 
-.dropdown:hover .dropdown-warp {
-    display: none !important;
-    visibility: none;
-}
+    .dropdown:hover .dropdown-warp {
+        display: none !important;
+        visibility: none;
+    }
 
-.peek-bag:hover .peek-bag-warp {
-    display: none !important;
-    visibility: none;
-}
+    .peek-bag:hover .peek-bag-warp {
+        display: none !important;
+        visibility: none;
+    }
+
+    .side-filter {
+        display: none;
+    }
+
+    .toolbar-option {
+        justify-content: space-between;
+
+        .view-col {
+                display: block;
+            }
+    }
+
+    .toolbar-item:nth-child(3) {
+        display: none;
+    }
+
+    .count-item {
+        text-align: center;
+        margin: 0px auto 15px;
+        text-transform: uppercase;
+    }
 
 }

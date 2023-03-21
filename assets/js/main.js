@@ -38,18 +38,18 @@
         });
     });
 
-    $(window).resize(function(){
-    if ($(window).width() < 768) {
-      $(".hide-filter").addClass("d-none");
-    } else {
-      $(".hide-filter").removeClass("d-none");
-    }
-  });
+//     $(window).resize(function(){
+//     if ($(window).width() < 768) {
+//       $(".hide-filter").addClass("d-none");
+//     } else {
+//       $(".hide-filter").removeClass("d-none");
+//     }
+//   });
 
-  // Jika lebar layar sudah kurang dari 768 pada saat memuat halaman, sembunyikan tombol filter
-    if ($(window).width() < 768) {
-        $(".hide-filter").addClass("d-none");
-    }
+//   // Jika lebar layar sudah kurang dari 768 pada saat memuat halaman, sembunyikan tombol filter
+//     if ($(window).width() < 768) {
+//         $(".hide-filter").addClass("d-none");
+//     }
 
 
     /*----------------------
@@ -71,6 +71,46 @@
         document.getElementById("count-product").innerHTML=total_item;
     } else {
         total_item = 0;
+    }
+
+
+    /*-----------------------------
+        Move position count item
+    -----------------------------*/
+    const elements = document.querySelectorAll('.count-item');
+    const outlist = document.querySelector('.toolbar');
+    const inlist = document.querySelector('.toolbar-item:nth-child(3)');
+
+    function moveElements() {
+    if (window.innerWidth <= 575) {
+        elements.forEach(element => outlist.insertBefore(element, outlist.firstChild));
+    } else {
+        elements.forEach(element => inlist.appendChild(element));
+    }
+    }
+
+    moveElements();
+    window.addEventListener('resize', moveElements);
+
+
+    /*-------------------------------
+        Switch column product grid
+    -------------------------------*/
+    var element = document.getElementsByClassName("product-col");
+    var i;
+
+    // Full-width images
+    function oneCol() {
+        for (i = 0; i < element.length; i++) {
+        element[i].style.width = "100%";
+        }
+    }
+
+    // Two images side by side
+    function twoCol() {
+        for (i = 0; i < element.length; i++) {
+        element[i].style.width = "50%";
+        }
     }
 
 

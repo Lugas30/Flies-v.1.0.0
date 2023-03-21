@@ -286,7 +286,7 @@
                 <h1>Summer Collection</h1>
             </div>
             <!-- Toolbars -->
-            <div class="toolbar">
+            <!-- <div class="toolbar">
                 <div class="toolbar-left">
                     <button class="hide-filter">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,7 +319,66 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+            <div class="toolbar">
+                <ul class="toolbar-option">
+                    <li class="toolbar-item">
+                        <button class="hide-filter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_43_2037" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_43_2037)">
+                                    <path
+                                        d="M11.25 20.75V15.25H12.75V17.25H20.75V18.75H12.75V20.75H11.25ZM3.25 18.75V17.25H8.75V18.75H3.25ZM7.25 14.75V12.75H3.25V11.25H7.25V9.25H8.75V14.75H7.25ZM11.25 12.75V11.25H20.75V12.75H11.25ZM15.25 8.75V3.25H16.75V5.25H20.75V6.75H16.75V8.75H15.25ZM3.25 6.75V5.25H12.75V6.75H3.25Z"
+                                        fill="#1C1B1F" />
+                                </g>
+                            </svg>
+                            filter
+                        </button>
+                    </li>
+                    <li class="toolbar-item view-col">
+                        <button class="btn" onclick="oneCol()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_696_1567" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <rect width="24" height="24" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_696_1567)">
+                                <path d="M3.5 20.5V3.5H20.5V20.5H3.5ZM5 19H19V5H5V19Z" fill="#1C1B1F" />
+                            </g>
+                        </svg>
+                        </button>
+                        <button class="btn" onclick="twoCol()">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_696_1561" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                                <rect x="0.443848" y="0.558594" width="24" height="24" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_696_1561)">
+                                <path
+                                    d="M15.4437 21.0586C14.9437 21.0586 14.5187 20.8836 14.1687 20.5336C13.8187 20.1836 13.6437 19.7586 13.6437 19.2586V5.85859C13.6437 5.35859 13.8187 4.93359 14.1687 4.58359C14.5187 4.23359 14.9437 4.05859 15.4437 4.05859H18.8187C19.3353 4.05859 19.7687 4.23359 20.1187 4.58359C20.4687 4.93359 20.6437 5.35859 20.6437 5.85859V19.2586C20.6437 19.7586 20.4687 20.1836 20.1187 20.5336C19.7687 20.8836 19.3353 21.0586 18.8187 21.0586H15.4437ZM15.1437 5.85859V19.2586C15.1437 19.3253 15.173 19.3919 15.2317 19.4586C15.2897 19.5253 15.3603 19.5586 15.4437 19.5586H18.8187C18.902 19.5586 18.977 19.5253 19.0437 19.4586C19.1103 19.3919 19.1437 19.3253 19.1437 19.2586V5.85859C19.1437 5.79193 19.1103 5.72526 19.0437 5.65859C18.977 5.59193 18.902 5.55859 18.8187 5.55859H15.4437C15.3603 5.55859 15.2897 5.59193 15.2317 5.65859C15.173 5.72526 15.1437 5.79193 15.1437 5.85859ZM6.06865 21.0586C5.55199 21.0586 5.11865 20.8836 4.76865 20.5336C4.41865 20.1836 4.24365 19.7586 4.24365 19.2586V5.85859C4.24365 5.35859 4.41865 4.93359 4.76865 4.58359C5.11865 4.23359 5.55199 4.05859 6.06865 4.05859H9.44365C9.94365 4.05859 10.3687 4.23359 10.7187 4.58359C11.0687 4.93359 11.2437 5.35859 11.2437 5.85859V19.2586C11.2437 19.7586 11.0687 20.1836 10.7187 20.5336C10.3687 20.8836 9.94365 21.0586 9.44365 21.0586H6.06865ZM5.74365 5.85859V19.2586C5.74365 19.3253 5.77699 19.3919 5.84365 19.4586C5.91032 19.5253 5.98532 19.5586 6.06865 19.5586H9.44365C9.52699 19.5586 9.59799 19.5253 9.65665 19.4586C9.71465 19.3919 9.74365 19.3253 9.74365 19.2586V5.85859C9.74365 5.79193 9.71465 5.72526 9.65665 5.65859C9.59799 5.59193 9.52699 5.55859 9.44365 5.55859H6.06865C5.98532 5.55859 5.91032 5.59193 5.84365 5.65859C5.77699 5.72526 5.74365 5.79193 5.74365 5.85859Z"
+                                    fill="#1C1B1F" />
+                            </g>
+                        </svg>
+                        </button>
+                    </li>
+                    <li class="toolbar-item count-position"><div class="count-item">( <span id="count-product"></span> items )</div></li>
+                    <li class="toolbar-item">
+                        <button id="sort-by">Sort by</button>
+                        <div class="sort-by">
+                            <div class="sort-warp">
+                                <ul>
+                                    <li>Price</li>
+                                    <li>ABNSHS</li>
+                                    <li>Price</li>
+                                    <li>ABNSHS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li> 
+                </ul>
             </div>
+
 
 
             <div class="row g-0">
