@@ -219,13 +219,13 @@
 
     .discount-price {
 
-        .price {
+        .disc-price {
             font-family: 'noah';
             font-size: 14px;
             color: $red;
         }
 
-        .percent {
+        .percentage {
             font-family: 'noah';
             font-size: 14px;
             color: $red;
@@ -235,7 +235,11 @@
 
 .loadmore {
     width: 100%;
-    text-align: center;
     padding: 30px;
+
+    #loadmore {
+        align-items: center;
+        margin: auto;
+    }
 }
 

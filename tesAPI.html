@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    // fetch('https://jsonplaceholder.typicode.com/todos/1')
+    //         .then(response => response.json())
+    //         .then(json => console.log(json))
+
+    // fetch('https://api.mississippiladies.com/produk.php')
+    //         .then(response => response.json())
+    //         .then(json => console.log(json))
+
+
+    // Data produk contoh
+        const productData = {
+            imgSrc: "path/to/image",
+            title: "Nama Produk",
+            normalPrice: 100000,
+            discountPrice: 75000,
+        };
+
+        // Membuat elemen gambar
+        const imgElement = document.createElement("img");
+        imgElement.src = productData.imgSrc;
+
+        // Membuat elemen judul
+        const titleElement = document.createElement("h2");
+        titleElement.textContent = productData.title;
+
+        // Membuat elemen harga
+        const priceElement = document.createElement("p");
+        if (productData.discountPrice === null) {
+            // Jika harga diskon tidak tersedia, tampilkan harga normal
+            priceElement.textContent = `Rp ${productData.normalPrice}`;
+        } else {
+            // Jika harga diskon tersedia, tampilkan harga diskon dan coret harga normal
+            priceElement.innerHTML = `<span style="text-decoration: line-through;">Rp ${productData.normalPrice}</span> Rp ${productData.discountPrice}`;
+        }
+
+        // Menambahkan elemen ke dalam elemen utama
+        const productElement = document.createElement("div");
+        productElement.appendChild(imgElement);
+        productElement.appendChild(titleElement);
+        productElement.appendChild(priceElement);
+
+        // Menambahkan elemen utama ke dalam dokumen
+        document.body.appendChild(productElement);
+
+
+</script>
+    
+</body>
+</html>

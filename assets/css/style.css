@@ -1191,12 +1191,12 @@ sementara gak semuanya wajib diisi */
   font-size: 12px !important;
   color: #BBBBBB;
 }
-.product-inner-price .discount-price .price {
+.product-inner-price .discount-price .disc-price {
   font-family: "noah";
   font-size: 14px;
   color: #D01345;
 }
-.product-inner-price .discount-price .percent {
+.product-inner-price .discount-price .percentage {
   font-family: "noah";
   font-size: 14px;
   color: #D01345;
@@ -1204,8 +1204,11 @@ sementara gak semuanya wajib diisi */
 
 .loadmore {
   width: 100%;
-  text-align: center;
   padding: 30px;
+}
+.loadmore #loadmore {
+  align-items: center;
+  margin: auto;
 }
 
 /*----------------------------------------*/

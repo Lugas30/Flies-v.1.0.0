@@ -62,18 +62,6 @@
     });
 
 
-    /*-------------------------
-        Product count item
-    --------------------------*/
-    let total_item;
-    total_item = document.querySelectorAll('.count').length;
-    if (total_item > 0) {
-        document.getElementById("count-product").innerHTML=total_item;
-    } else {
-        total_item = 0;
-    }
-
-
     /*-----------------------------
         Move position count item
     -----------------------------*/
@@ -112,6 +100,7 @@
         element[i].style.width = "50%";
         }
     }
+
 
 
     /*-------------------------
@@ -274,3 +263,10 @@
     }
 
    
+    /*-----------------------------------
+        Footer Copyright Flies
+    -----------------------------------*/
+
+    const currentYear = new Date().getFullYear(); // mendapatkan tahun saat ini
+    const footerStamp = `Copyrights &copy ${currentYear} Flies`;
+    document.querySelector(".site-copy span").innerHTML = footerStamp;
