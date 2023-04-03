@@ -287,11 +287,11 @@
 
             <div class="product-view-container">
                 <div class="row g-0 product-view-row">
-                    
+                
                     <!-- Photo product -->
                     <div class="col-md-6 product-view-left">
                         <div class="product-galery">
-                            <div class="thumbnails">
+                            <div class="thumbnails" id="thumbnails">
                                 <div id="f1" class="tb tb-active"><img class="thumbnail-img fit-image"
                                         src="assets/img/product/1A.jpeg"></div>
                                 <div id="f2" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1B.jpeg">
@@ -305,8 +305,41 @@
                                 <div id="f6" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1F.jpeg">
                                 </div>
                             </div>
+
+
+                            <!-- <script>
+                                // URL API Gambar
+                                const apiUrl = "https://api.example.com/images";
+
+                                // Jumlah gambar yang ingin ditampilkan
+                                const numImages = 6;
+
+                                // Ambil data gambar dari API
+                                fetch(apiUrl)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Ambil 6 gambar pertama dari data API
+                                        const images = data.slice(0, numImages);
+
+                                        // Tambahkan gambar ke halaman web
+                                        const thumbnails = document.getElementById("thumbnails");
+                                        images.forEach(image => {
+                                            const imgElement = document.createElement("img");
+                                            imgElement.classList.add("thumbnail-img", "fit-image");
+                                            imgElement.setAttribute("src", image.url);
+
+                                            const divElement = document.createElement("div");
+                                            divElement.classList.add("tb");
+                                            divElement.appendChild(imgElement);
+
+                                            thumbnails.appendChild(divElement);
+                                        });
+                                    });
+                            </script> -->
+
+
                             <fieldset id="f11" class="active">
-                                <div class="product-pic"><img class="pic0" src="assets/img/product/1A.jpeg"></div>
+                                <div class="product-pic"><img class="pic0" src="https://nurkholis.flies.co.id/upload/products/6A.jpeg"></div>
                             </fieldset>
                             <fieldset id="f21">
                                 <div class="product-pic"><img class="pic0" src="assets/img/product/1B.jpeg"></div>
@@ -324,6 +357,8 @@
                                 <div class="product-pic"><img class="pic0" src="assets/img/product/1F.jpeg"></div>
                             </fieldset>
                         </div>
+
+
                         <div class="product-pic-warp-mobile">
                             <div class="carousel slide" data-interval="false" data-ride="carousel" id="carousel-1">
                                 <div class="carousel-inner" role="listbox">
@@ -366,12 +401,26 @@
                             </div>
                         </div>
                     </div>
-            
+
+                    <script>
+                        const api_url = 'https://nurkholis.flies.co.id/product_detail.php';
+                        async function getDetailProduct() {
+                        const response = await fetch(api_url);
+                        const data = await response.json();
+                        // nama variabel yang ada di API
+                        const { product_name, price, price_disc, percent_disc, description, size_chart,  } = data;
+
+                        document.getElementById('product-title').textContent = product_name;
+                        document.getElementsByClassName('price').textContent = price;
+                        document.getElementsByClassName('sat').textContent = price_disc;
+                        }
+                        getDetailProduct();
+                    </script>
 
                     <!-- Detail product -->
                     <div class="col-md-6 product-view-right">
                         <div class="product-view-title">
-                            <h2>Combo Colour Casual T-shirt</h2>
+                            <h2 id="product-title">Combo Colour Casual T-shirt</h2>
                         </div>
                         
                         <div class="product-view-price">
