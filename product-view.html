@@ -382,7 +382,7 @@
                         <div class="product-view-price">
                             <div id="" class="normal-price">
                                 <!-- Apabila harga discount class off ditambahkan -->
-                                <span id="price" class="price off">IDR 299.000</span>
+                                <span id="price" class="price ">IDR 299.000</span>
                             </div>
                             <div id="" class="discount-price">
                                 <span id="price_disc" class="price">IDR 149.000</span>
@@ -620,26 +620,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <div id="produk-container">
-                <h1>Detail Produk</h1>
-                <p><strong>Nama Produk:</strong> <span id="nama-produk"></span></p>
-                <p><strong>Kategori:</strong> <span id="kategori"></span></p>
-                <p><strong>Harga:</strong> <span id="harga"></span></p>
-                <p><strong>Deskripsi:</strong> <span id="deskripsi"></span></p>
-                <p><strong>Tabel Ukuran:</strong></p>
-                <table id="tabel-ukuran">
-                    <thead>
-                        <tr>
-                            <th>Ukuran</th>
-                            <th>Lingkar Dada</th>
-                            <th>Panjang</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
             
     <script>
         // Mengambil data dari API menggunakan fetch()
@@ -657,10 +637,14 @@
                 
                 // Lagi dioprek
                 let percent_disc = document.querySelector('#percent_disc');
+                percent_disc.textContent = "(" + data.detail_produk.percent_disc + "%)";
+                
                 if (data.detail_produk.percent_disc !== "0") {
                     percent_disc.textContent = "(" + data.detail_produk.percent_disc + "%)";
+                    price.classList.add(" off");
                 } else {
                     percent_disc.style.display = "none";
+                    price_disc.style.display = "none";
                 }
                 
 
