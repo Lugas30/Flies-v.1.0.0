@@ -307,37 +307,6 @@
                             </div>
 
 
-                            <!-- <script>
-                                // URL API Gambar
-                                const apiUrl = "https://api.example.com/images";
-
-                                // Jumlah gambar yang ingin ditampilkan
-                                const numImages = 6;
-
-                                // Ambil data gambar dari API
-                                fetch(apiUrl)
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        // Ambil 6 gambar pertama dari data API
-                                        const images = data.slice(0, numImages);
-
-                                        // Tambahkan gambar ke halaman web
-                                        const thumbnails = document.getElementById("thumbnails");
-                                        images.forEach(image => {
-                                            const imgElement = document.createElement("img");
-                                            imgElement.classList.add("thumbnail-img", "fit-image");
-                                            imgElement.setAttribute("src", image.url);
-
-                                            const divElement = document.createElement("div");
-                                            divElement.classList.add("tb");
-                                            divElement.appendChild(imgElement);
-
-                                            thumbnails.appendChild(divElement);
-                                        });
-                                    });
-                            </script> -->
-
-
                             <fieldset id="f11" class="active">
                                 <div class="product-pic"><img class="pic0" src="https://nurkholis.flies.co.id/upload/products/6A.jpeg"></div>
                             </fieldset>
@@ -402,35 +371,22 @@
                         </div>
                     </div>
 
-                    <script>
-                        const api_url = 'https://nurkholis.flies.co.id/product_detail.php';
-                        async function getDetailProduct() {
-                        const response = await fetch(api_url);
-                        const data = await response.json();
-                        // nama variabel yang ada di API
-                        const { product_name, price, price_disc, percent_disc, description, size_chart,  } = data;
-
-                        document.getElementById('product-title').textContent = product_name;
-                        document.getElementsByClassName('price').textContent = price;
-                        document.getElementsByClassName('sat').textContent = price_disc;
-                        }
-                        getDetailProduct();
-                    </script>
 
                     <!-- Detail product -->
                     <div class="col-md-6 product-view-right">
                         <div class="product-view-title">
-                            <h2 id="product-title">Combo Colour Casual T-shirt</h2>
+                            <h2 id="product_name">Combo Colour Casual T-shirt</h2>
+                            <!-- <h2 id="product-title">Combo Colour Casual T-shirt</h2> -->
                         </div>
                         
                         <div class="product-view-price">
                             <div id="" class="normal-price">
                                 <!-- Apabila harga discount class off ditambahkan -->
-                                <span class="price off">IDR 299.000</span>
+                                <span id="price" class="price off">IDR 299.000</span>
                             </div>
                             <div id="" class="discount-price">
-                                <span class="price">IDR 149.000</span>
-                                <span class="percent">(50%)</span>
+                                <span id="price_disc" class="price">IDR 149.000</span>
+                                <span id="percent_disc" class="percent">(50%)</span>
                             </div>
                         </div>
             
@@ -531,7 +487,7 @@
                                         fill="#F686BD" />
                                 </svg>
                             </button>
-                            <div class="panel">
+                            <div id="description" class="panel">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 <br>
                                 <br>
@@ -562,7 +518,7 @@
                                         fill="#F686BD" />
                                 </svg>
                             </button>
-                            <div class="panel">
+                            <div id="size_chart" class="panel">
                                 Size S Lingkar Dada : 110cm , Panjang : 55cm<br>
                                 Size M Lingkar Dada : 112cm , Panjang : 57cm<br>
                                 Size L Lingkar Dada : 114cm , Panjang : 59cm<br>
@@ -572,6 +528,23 @@
         
                     </div>
                 </div>
+
+                <!-- <script>
+                    const api_url = 'https://nurkholis.flies.co.id/product_detail.php?id=11';
+                    async function getDetail() {
+                        const response = await fetch(api_url);
+                        const data = await response.json();
+                        // nama variabel yang ada di API
+                        const { detail_product, product_name, price, price_disc, percent_disc, description } = data;
+
+                        console.log(detail_product)
+                        document.getElementById('x-title').textContent = product_name;
+                        document.getElementsByClassName('price').textContent = price;
+                        document.getElementsByClassName('sat').textContent = price_disc;
+                    }
+                    getDetail();
+                </script> -->
+
                 <!-- CTA product section -->
                 <div class="cta-product">
                     <span class="cta-title">You may also like</span><hr>
@@ -647,6 +620,57 @@
                     </div>
                 </div>
             </div>
+
+
+            <div id="produk-container">
+                <h1>Detail Produk</h1>
+                <p><strong>Nama Produk:</strong> <span id="nama-produk"></span></p>
+                <p><strong>Kategori:</strong> <span id="kategori"></span></p>
+                <p><strong>Harga:</strong> <span id="harga"></span></p>
+                <p><strong>Deskripsi:</strong> <span id="deskripsi"></span></p>
+                <p><strong>Tabel Ukuran:</strong></p>
+                <table id="tabel-ukuran">
+                    <thead>
+                        <tr>
+                            <th>Ukuran</th>
+                            <th>Lingkar Dada</th>
+                            <th>Panjang</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            
+    <script>
+        // Mengambil data dari API menggunakan fetch()
+        fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
+            .then(response => response.json())
+            .then(data => {
+                // Menampilkan data di dalam blok HTML
+                document.getElementById('product_name').textContent = data.detail_produk.product_name;
+                
+                let price = document.querySelector('#price');
+                price.textContent = "IDR " + data.detail_produk.price;
+                
+                let price_disc = document.querySelector('#price_disc');
+                price_disc.textContent = "IDR " + data.detail_produk.price_disc;
+                
+                // Lagi dioprek
+                let percent_disc = document.querySelector('#percent_disc');
+                if (data.detail_produk.percent_disc !== "0") {
+                    percent_disc.textContent = "(" + data.detail_produk.percent_disc + "%)";
+                } else {
+                    percent_disc.style.display = "none";
+                }
+                
+
+                document.getElementById('description').textContent = data.detail_produk.description;
+                document.getElementById('size_chart').textContent = data.detail_produk.size_chart;
+
+            })
+            .catch(error => console.error(error));
+    </script>
+
 
     </main>
 

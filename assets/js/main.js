@@ -137,35 +137,6 @@
     });
 
 
-// Menyebabkan error pada js product view
-    /*----------------------------
-        Load more product grid
-    ----------------------------*/
-    // let loadMoreBtn = document.querySelector('#load-more');
-    //     let currentItem = 4;
-    //     loadMoreBtn.onclick = () => {
-    //         let boxes = [...document.querySelectorAll('.product-col .product-warp')];
-    //         for (var i = currentItem; i < currentItem + 4; i++) {
-    //             boxes[i].style.display = 'inline-block';
-    //         }
-    //         currentItem += 4;
-    //         if (currentItem >= boxes.length) {
-    //             loadMoreBtn.style.display = 'none';
-    //         }
-    //     }
-
-
-    /*----------------------------
-        Load more product grid jquery
-    ----------------------------*/
-    // $(document).ready(function () {
-    //         $(".image").slice(0, 4).fadeIn();
-
-    //         $(".load-more").click(function () {
-    //             $(".image").slice(0, 12).fadeIn();
-    //             $(this).fadeOut();
-    //         });
-    //     });
 
     /*-----------------------------------
         Adding class active to button

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Where is the ISS ?</h1>
+<!-- <h1>Where is the ISS ?</h1>
 <p>
     latitude: <span id="lat"></span><br>
     longitude: <span id="lon"></span><br>
@@ -30,7 +30,113 @@
             document.getElementById('sat').textContent = name;
         }
         getISS();
+</script> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contoh Mengambil Data dari API</title>
+</head>
+
+<!-- <body>
+    <div id="produk-container">
+        <h1>Detail Produk</h1>
+        <p><strong>Nama Produk:</strong> <span id="nama-produk"></span></p>
+        <p><strong>Kategori:</strong> <span id="kategori"></span></p>
+        <p><strong>Harga:</strong> <span id="harga"></span></p>
+        <p><strong>Deskripsi:</strong> <span id="deskripsi"></span></p>
+        <p><strong>Tabel Ukuran:</strong></p>
+        <table id="tabel-ukuran">
+            <thead>
+                <tr>
+                    <th>Ukuran</th>
+                    <th>Lingkar Dada</th>
+                    <th>Panjang</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        // Mengambil data dari API menggunakan fetch()
+        fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
+            .then(response => response.json())
+            .then(data => {
+                // Menampilkan data di dalam blok HTML
+                document.getElementById('nama-produk').textContent = data.detail_produk.product_name;
+                document.getElementById('kategori').textContent = data.detail_produk.category_name;
+                document.getElementById('harga').textContent = data.detail_produk.price;
+                document.getElementById('deskripsi').textContent = data.detail_produk.description;
+                let tabelUkuran = document.getElementById('tabel-ukuran').getElementsByTagName('tbody')[0];
+                let sizeChart = data.detail_produk.size_chart.split('\r\n');
+                sizeChart.forEach(row => {
+                    let cells = row.split(' ');
+                    let rowElement = tabelUkuran.insertRow();
+                    for (let i = 0; i < cells.length; i++) {
+                        let cell = rowElement.insertCell(i);
+                        cell.textContent = cells[i];
+                    }
+                });
+            })
+            .catch(error => console.error(error));
+    </script>
+</body> -->
+
+
+<div id="produk-container">
+    <h1>Detail Produk</h1>
+    <p><strong>Nama Produk:</strong> <span id="nama-produk"></span></p>
+    <p><strong>Kategori:</strong> <span id="kategori"></span></p>
+    <p><strong>Harga:</strong> <span class="harga"></span></p>
+    <p><strong>Harga Diskon:</strong> <span class="harga-diskon"></span></p>
+    <p><strong>Diskon:</strong> <span class="diskon"></span></p>
+    <p><strong>Deskripsi:</strong> <span id="deskripsi"></span></p>
+    <p><strong>Tabel Ukuran:</strong></p>
+    <table id="tabel-ukuran">
+        <thead>
+            <tr>
+                <th>Ukuran</th>
+                <th>Lingkar Dada</th>
+                <th>Panjang</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+<script>
+    // Mengambil data dari API menggunakan fetch()
+    fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
+        .then(response => response.json())
+        .then(data => {
+            // Menampilkan data di dalam blok HTML
+            document.getElementById('nama-produk').textContent = data.detail_produk.product_name;
+            document.getElementById('kategori').textContent = data.detail_produk.category_name;
+            let harga = document.querySelector('.harga');
+            harga.textContent = "Rp " + data.detail_produk.price_disc;
+            let diskon = document.querySelector('.diskon');
+            diskon.textContent = data.detail_produk.percent_disc + "%";
+            document.getElementById('deskripsi').textContent = data.detail_produk.description;
+            let tabelUkuran = document.getElementById('tabel-ukuran').getElementsByTagName('tbody')[0];
+            let sizeChart = data.detail_produk.size_chart.split('\r\n');
+            sizeChart.forEach(row => {
+                let cells = row.split(' ');
+                let rowElement = tabelUkuran.insertRow();
+                for (let i = 0; i < cells.length; i++) {
+                    let cell = rowElement.insertCell(i);
+                    cell.textContent = cells[i];
+                }
+            });
+        })
+        .catch(error => console.error(error));
 </script>
+
+</html>
+
     
 </body>
 </html>
