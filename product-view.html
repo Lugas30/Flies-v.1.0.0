@@ -289,7 +289,7 @@
                 <div class="row g-0 product-view-row">
                 
                     <!-- Photo product -->
-                    <div class="col-md-6 product-view-left">
+                    <!-- <div class="col-md-6 product-view-left">
                         <div class="product-galery">
                             <div class="thumbnails" id="thumbnails">
                                 <div id="f1" class="tb tb-active"><img class="thumbnail-img fit-image"
@@ -297,13 +297,7 @@
                                 <div id="f2" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1B.jpeg">
                                 </div>
                                 <div id="f3" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1C.jpeg">
-                                </div>
-                                <div id="f4" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1D.jpeg">
-                                </div>
-                                <div id="f5" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1E.jpeg">
-                                </div>
-                                <div id="f6" class="tb"><img class="thumbnail-img fit-image" src="assets/img/product/1F.jpeg">
-                                </div>
+                                </div> 
                             </div>
 
 
@@ -316,17 +310,94 @@
                             <fieldset id="f31">
                                 <div class="product-pic"><img class="pic0" src="assets/img/product/1C.jpeg"></div>
                             </fieldset>
-                            <fieldset id="f41">
-                                <div class="product-pic"><img class="pic0" src="assets/img/product/1D.jpeg"></div>
-                            </fieldset>
-                            <fieldset id="f51">
-                                <div class="product-pic"><img class="pic0" src="assets/img/product/1E.jpeg"></div>
-                            </fieldset>
-                            <fieldset id="f61">
-                                <div class="product-pic"><img class="pic0" src="assets/img/product/1F.jpeg"></div>
-                            </fieldset>
-                        </div>
+                        </div> -->
 
+                        <!-- Photo product -->
+                        <div class="col-md-6 product-view-left">
+                            <div class="product-galery">
+                                <div class="thumbnails" id="thumbnails">
+                                    
+                                </div>
+                        
+                        
+                                <fieldset>
+                                    
+                                </fieldset>
+                            </div>
+
+
+    <script>
+    //ambil data dari API
+        fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
+            .then(response => response.json())
+            .then(data => {
+                //mengambil element thumbnails dan fieldset
+                const thumbnails = document.getElementById('thumbnails');
+                const fieldsets = document.querySelectorAll('fieldset');
+
+                //mengambil data gambar dari API
+                const imgUrls = data.detail_produk.img;
+
+                //membuat element img dan menambahkan class dan atribut
+                imgUrls.forEach((url, index) => {
+                    const img = document.createElement('img');
+                    img.classList.add('thumbnail-img', 'fit-image');
+                    img.src = url;
+
+                    //membuat element div dan menambahkan id dan class
+                    const div = document.createElement('div');
+                    div.id = `f${index + 1}`;
+                    div.classList.add('tb');
+
+                    //menambahkan img ke dalam div
+                    div.appendChild(img);
+
+                    //menambahkan div ke dalam thumbnails
+                    thumbnails.appendChild(div);
+
+                    //menambahkan class tb-active pada thumbnail pertama
+                    if (index === 0) {
+                        div.classList.add('tb-active');
+                    }
+
+                    //menambahkan class active pada fieldset pertama
+                    if (index === 0) {
+                        fieldsets[0].classList.add('active');
+                    }
+
+                    //membuat element img dan menambahkan class dan atribut
+                    const picImg = document.createElement('img');
+                    picImg.classList.add('pic0');
+                    picImg.src = url;
+
+                    //membuat element div dan menambahkan class
+                    const picDiv = document.createElement('div');
+                    picDiv.classList.add('product-pic');
+
+                    //membuat element fieldset dan menambahkan id
+                    const fieldset = document.createElement('fieldset');
+                    fieldset.id = `f${index + 1}1`;
+
+                    //menambahkan picImg ke dalam picDiv
+                    picDiv.appendChild(picImg);
+
+                    //menambahkan picDiv ke dalam fieldset
+                    fieldset.appendChild(picDiv);
+
+                    //menambahkan fieldset ke dalam blok product-galery
+                    thumbnails.parentNode.insertBefore(fieldset, thumbnails.nextSibling);
+
+                    //menambahkan class active pada fieldset pertama
+                    if (index === 0) {
+                        fieldset.classList.add('active');
+                    }
+                });
+            });
+
+
+            
+
+    </script>
 
                         <div class="product-pic-warp-mobile">
                             <div class="carousel slide" data-interval="false" data-ride="carousel" id="carousel-1">
@@ -463,7 +534,7 @@
 
                         <div class="group-button">
                             <div class="group-button-left">
-                                <button class="btn-yellow">Add to bag</button>
+                                <button id="add-to-cart-btn" class="btn-yellow">Add to bag</button>
                             </div>
                             <div class="group-button-right">
                                 <div class="warp-love">
@@ -621,7 +692,7 @@
                 </div>
             </div>
             
-    <script>
+    <!-- <script>
         // Mengambil data dari API menggunakan fetch()
         fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
             .then(response => response.json())
@@ -629,6 +700,11 @@
                 // Menampilkan data di dalam blok HTML
                 document.getElementById('product_name').textContent = data.detail_produk.product_name;
                 
+                let qty = 1;
+
+                let id = data.detail_produk.id;
+                console.log(id);
+
                 let price = document.querySelector('#price');
                 price.textContent = "IDR " + data.detail_produk.price;
                 
@@ -653,6 +729,123 @@
 
             })
             .catch(error => console.error(error));
+
+
+            
+        // Kirim data ke API add_to_cart.php
+
+            function addToCart(id, price, qty) {
+                // membuat objek FormData
+                var formData = new FormData();
+                // menambahkan data ke objek FormData
+                formData.append("id", id);
+                formData.append("price", price);
+                formData.append("qty", qty);
+
+                // mengirim data ke server menggunakan fetch()
+                fetch("https://nurkholis.flies.co.id/add_to_cart.php", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => {
+                        // menangani respon dari server
+                        console.log(response);
+
+                        // mengambil pesan dari respon API
+                        response.text().then(function (message) {
+                            // menampilkan alert dengan pesan dari respon API
+                            alert("Status pengiriman data:\n\n" + message);
+                        });
+                    })
+                    .catch(error => {
+                        // menangani error jika ada
+                        console.error(error);
+                    });
+
+            }
+
+
+            // mendapatkan referensi tombol "Add to Cart"
+                var addToCartBtn = document.getElementById("add-to-cart-btn");
+
+                // menambahkan event listener pada tombol
+                addToCartBtn.addEventListener("click", function () {
+
+                    // Variabel mengambil data yang sebelumnya sudah didefinisikan
+                    var id = document.getElementById("id").value;
+                    var price = document.getElementById("price").value;
+                    var qty = document.getElementById("qty").value;
+
+                    // memanggil fungsi addToCart dengan nilai variabel yang sudah didapatkan
+                    addToCart(id, price, qty);
+                });
+
+
+    </script> -->
+
+
+    <!-- Logic add to cart yang sudah diperbaiki -->
+    <script>
+        // Mengambil data dari API menggunakan fetch()
+            fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
+                .then(response => response.json())
+                .then(data => {
+                    // Menampilkan data di dalam blok HTML
+                    document.getElementById('product_name').textContent = data.detail_produk.product_name;
+                    let qty = 1;
+                    let id = data.detail_produk.id;
+                    console.log(id);
+                    let price = document.querySelector('#price');
+                    price.textContent = "IDR " + data.detail_produk.price;
+                    let price_disc = document.querySelector('#price_disc');
+                    price_disc.textContent = "IDR " + data.detail_produk.price_disc;
+                    let percent_disc = document.querySelector('#percent_disc');
+                    percent_disc.textContent = "(" + data.detail_produk.percent_disc + "%)";
+                    if (data.detail_produk.percent_disc !== "0") {
+                        percent_disc.style.display = "inline";
+                        price.classList.add("off");
+                    } else {
+                        percent_disc.style.display = "none";
+                        price_disc.style.display = "none";
+                    }
+                    document.getElementById('description').textContent = data.detail_produk.description;
+                    document.getElementById('size_chart').textContent = data.detail_produk.size_chart;
+                    let addToCartBtn = document.getElementById("add-to-cart-btn");
+                    addToCartBtn.addEventListener("click", function () {
+                        // memanggil fungsi addToCart dengan nilai variabel yang sudah didapatkan
+                        addToCart(id, price.textContent, qty);
+                    });
+                })
+                .catch(error => console.error(error));
+
+            // Kirim data ke API add_to_cart.php
+            function addToCart(id, price, qty) {
+                // membuat objek FormData
+                let formData = new FormData();
+                // menambahkan data ke objek FormData
+                formData.append("id", id);
+                formData.append("price", price);
+                formData.append("qty", qty);
+                // mengirim data ke server menggunakan fetch()
+                fetch("https://nurkholis.flies.co.id/add_to_cart.php", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => {
+                        // menangani respon dari server
+                        console.log(response);
+                        // mengambil pesan dari respon API
+                        response.text().then(function (message) {
+                            // menampilkan alert dengan pesan dari respon API
+                            alert("Status pengiriman data:\n\n" + message);
+                        });
+                    })
+                    .catch(error => {
+                        // menangani error jika ada
+                        console.error(error);
+                    });
+            }
+
     </script>
 
 
