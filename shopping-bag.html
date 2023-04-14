@@ -282,10 +282,10 @@
                         </div>
                         <div class="col-9 col-md-9 shopbag-item-desc">
                             <div class="shopbag-inner">
-                                <span class="shopbag-inner-title">Product Testing</span>
+                                <span class="shopbag-inner-title" id="product_name">Product name</span>
                                 <div class="shopbag-inner-price">
                                     <div id="" class="shopbag-normal-price">
-                                        <span class="shopbag-price">IDR 299.000</span>
+                                        <span class="shopbag-price" id="price">IDR 299.000</span>
                                     </div>
                                     <div id="" class="shopbag-discount-price">
                                         <span class="shopbag-price"></span>
@@ -298,7 +298,7 @@
                                 <div class="col-md-12 pt-1 pb-3">
                                     <form id='quantity' method='POST' class='quantity' action='#'>
                                         <input type='button' value='-' class='qtyminus minus' field='quantity' />
-                                        <input type='text' name='quantity' value='1' class='qty' />
+                                        <input type='text' name='quantity' value='1' class='qty' id="qty" />
                                         <input type='button' value='+' class='qtyplus plus' field='quantity' />
                                     </form>
                                 </div>
@@ -320,12 +320,22 @@
                         </div>
                         <hr>
                     </div>
-
-
-                    <!-- Javascript code -->
-                    
-
                 </div>
+
+            <script>
+                // Mengambil data dari API menggunakan fetch()
+                    fetch('https://nurkholis.flies.co.id/product_detail.php?id=11')
+                        .then(response => response.json())
+                        .then(data => {
+                            // Menampilkan data di dalam blok HTML
+                            document.getElementById('product_name').textContent = data.detail_produk.product_name;
+                            let price = document.querySelector('#price');
+                            price.textContent = "IDR " + data.detail_produk.price;
+                            let qty = document.querySelector('#qty');
+                            qty.textContent = "IDR " + data.detail_produk.qty;
+                        })
+            </script>
+
                 <div class="col-md-6 shopbag-right">
                     <div class="page-small-heading">
                         <h3>Note for seller</h3>
